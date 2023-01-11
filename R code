@@ -20,4 +20,4 @@ s<- get_nrc_sentiment(Review)
 review_sentiment<-cbind(text_df$sentence,s)
 View(review_sentiment)
 #Plotting the results in form of bargraph
-barplot(colSums(s), col= rainbow(10),ylab = 'Check it Out Trifa')
+barplot(colSums(s), col= rainbow(10),ylab = 'Check it Out Everyone')
