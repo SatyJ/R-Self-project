@@ -1,0 +1,23 @@
+#First we need to set up a working directory
+setwd("C:/R stuffy")
+
+#Installing packages
+library(tidyverse)
+install.packages ("sentimentr")
+installed.packages()
+library(sentimentr)
+install.packages("syuzhet")
+library(syuzhet)
+#Loading the csv file in R
+text_df<- read.csv("Text_data.csv", stringsAsFactors = FALSE)
+View(text_df)
+Review<- as.character(text_df$sentence)
+#Using syuzhet library to find sentiments
+get_nrc_sentiment('happy')
+get_nrc_sentiment('happy')
+get_nrc_sentiment('excitement')
+s<- get_nrc_sentiment(Review)
+review_sentiment<-cbind(text_df$sentence,s)
+View(review_sentiment)
+#Plotting the results in form of bargraph
+barplot(colSums(s), col= rainbow(10),ylab = 'Check it Out Trifa')
