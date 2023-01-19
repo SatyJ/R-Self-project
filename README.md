@@ -1,2 +1,2 @@
 # R-Self-project
-Sentiment analysis of Amazon reviews through R
+Sentiment analysis of movie reviews through R
